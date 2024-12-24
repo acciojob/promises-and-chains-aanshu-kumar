@@ -1,6 +1,6 @@
 //your JS code here. If required.
-let name=document.getElementById("name");
-let age = document.getElementById("age");
+let name=document.getElementById("name").value;
+let age = document.getElementById("age").value;
 const mypromise = new Promise((resolve,reject)=>{
 	
 	setTimeout(()=>{
