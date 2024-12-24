@@ -1,4 +1,6 @@
 //your JS code here. If required.
+function verify(){
+	
 let name=document.getElementById("name").value;
 let age = document.getElementById("age").value;
 const mypromise = new Promise((resolve,reject)=>{
@@ -16,3 +18,4 @@ mypromise.then((response)=>{
 }).catch((err)=>{
 	alert(err);
 })
+}
