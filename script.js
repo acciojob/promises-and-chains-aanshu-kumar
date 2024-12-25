@@ -1,8 +1,9 @@
-//your JS code here. If required.
+document.getElementById("myForm").addEventListener("submit", (event) => {
+  event.preventDefault(); // prevent the form from submitting normally
 
-document.getElementById("submit").addEventListener("click", () => {
   let name = document.getElementById("name").value;
   let age = document.getElementById("age").value;
+
   const mypromise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (age >= 18) resolve(`Welcome ${name}. You can vote.`);
