@@ -1,14 +1,17 @@
-document.getElementById("btn").addEventListner("click",()=>{
+document.getElementById("btn").addEventListener("click",()=>{
   let name = document.getElementById("name").value;
   let age = document.getElementById("age").value;
 
   const mypromise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (age >= 18) resolve(`Welcome, ${name}. You can vote.`);
-      else if reject(`Oh sorry ${name}. You aren't old enough.`);
+      if (name === "" || age === "") {
+        reject(`Please enter valid details`);
+      } else if (age >= 18) {
+        resolve(`Welcome, ${name}. You can vote.`);
+      } else {
+        reject(`Oh sorry ${name}. You aren't old enough.`);
+      }
     }, 4000);
-	  else
-	  reject(`Please enter valid details`);
   });
 
   mypromise
